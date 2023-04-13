@@ -1,0 +1,45 @@
+/* Fondo oscuro */
+.root {
+  -fx-background-color: #333333;
+}
+
+/* Color de fuente blanco */
+.label {
+  -fx-text-fill: white;
+}
+
+/* Color de fondo oscuro para botones */
+.button {
+  -fx-background-color: #4d4d4d;
+  -fx-text-fill: white;
+}
+
+/* Color de fondo oscuro para botones cuando se presionan */
+.button:pressed {
+  -fx-background-color: #666666;
+}
+
+/* Color de fondo oscuro para botones cuando el mouse pasa por encima */
+.button:hover {
+  -fx-background-color: #555555;
+}
+
+/* Color de fondo oscuro para el panel de anclaje */
+.anchor-pane {
+  -fx-background-color: #000000;
+}
+
+/* Color de fondo oscuro para el panel de anclaje cuando el mouse pasa por encima */
+.anchor-pane:hover {
+  -fx-background-color: #111111;
+}
+
+/* Color de fondo oscuro para el panel de anclaje */
+.anchor-pane-color {
+  -fx-background-color: #4d4d4d;
+}
+
+/* Color de fondo oscuro para el panel de anclaje cuando el mouse pasa por encima */
+.anchor-pane-color:hover {
+  -fx-background-color: #555555;
+}
