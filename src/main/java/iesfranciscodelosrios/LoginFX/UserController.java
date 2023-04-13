@@ -11,10 +11,7 @@ import javafx.scene.control.Button;
 public class UserController{
 	@FXML
 	private Button button_OK;
-	@FXML
-	private Button button_Cancel;
-	@FXML
-	private Button button_back;
+	
 	@FXML
 	private void alertButton() throws IOException{
 		Alert alert = new Alert(AlertType.INFORMATION);
