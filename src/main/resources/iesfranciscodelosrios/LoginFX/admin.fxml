@@ -12,7 +12,7 @@
          <children>
             <Button fx:id="atras" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="156.0" prefWidth="100.0" text="ATRAS" />
             <Button fx:id="oscuro" mnemonicParsing="false" onAction="#switchToDarkMode" prefHeight="170.0" prefWidth="100.0" text="MODO &#10;OSCURO" textAlignment="CENTER" />
-            <Button fx:id="ingles" mnemonicParsing="false" onAction="#cambiarIdioma" prefHeight="128.0" prefWidth="100.0" text="TRADUCIR &#10;AL&#10;INGLÉS" textAlignment="CENTER" />
+            <Button fx:id="ingles" mnemonicParsing="false" onAction="#onEnglishButtonClicked" prefHeight="128.0" prefWidth="100.0" text="TRADUCIR &#10;AL&#10;INGLÉS" textAlignment="CENTER" />
          </children>
       </VBox>
       <Label fx:id="label" layoutX="226.0" layoutY="210.0" text="MODO ADMINISTRADOR">
