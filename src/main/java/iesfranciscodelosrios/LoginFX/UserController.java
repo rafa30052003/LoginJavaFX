@@ -23,4 +23,10 @@ public class UserController{
 	private void alerta() throws IOException{
 		alertButton();
 	}
+	
+	@FXML
+	private void switchToLogin()throws IOException {
+		App.setRoot("login");
+	}
+	
 }
