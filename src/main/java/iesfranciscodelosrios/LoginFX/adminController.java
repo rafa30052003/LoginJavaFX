@@ -2,6 +2,8 @@ package iesfranciscodelosrios.LoginFX;
 
 import javafx.event.ActionEvent;
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -17,7 +19,7 @@ public class adminController {
 	@FXML Button ingles;
 	@FXML AnchorPane panel;
 	@FXML Label label;
-	
+	private ResourceBundle bundle;
 	
 	
 	@FXML
@@ -33,5 +35,31 @@ public class adminController {
 	    
 	    scene.getStylesheets().add(getClass().getResource("/iesfranciscodelosrios/styles/oscuro.css").toExternalForm()); // Agrega la hoja de estilo de modo oscuro
 	}
+	
+	
+
+
+	
+	
+	  
+	public void initialize() {
+        // Inicializar el objeto bundle con el archivo de propiedades correspondiente
+        bundle = ResourceBundle.getBundle("com.example.MyBundle");
+    }
+
+    @FXML
+    public void cambiarIdioma(ActionEvent event) {
+        // Utilizar el objeto bundle para obtener los textos correspondientes al idioma seleccionado
+        String textoLabel = bundle.getString("label.text");
+        String textoVolver = bundle.getString("buttonVolver.text");
+        String textoOscuro = bundle.getString("buttonOscuro.text");
+        String textoTraducir = bundle.getString("buttonTraducir.text");
+        label.setText(textoLabel);
+        atras.setText(textoVolver);
+        oscuro.setText(textoOscuro);
+        ingles.setText(textoTraducir);
+    }
+	
+	
 	
 }
