@@ -20,7 +20,7 @@ public class adminController {
 	@FXML AnchorPane panel;
 	@FXML Label label;
 	private ResourceBundle bundle;
-	
+	private String language = "en";
 	
 	@FXML
 	private void switchToLogin()throws IOException {
@@ -37,27 +37,36 @@ public class adminController {
 	}
 	
 	
+	 public void initialize() {
+	        // carga el archivo de propiedades para el idioma por defecto (inglés)
+		 
 
+		 bundle = ResourceBundle.getBundle("traducciones.ingles", Locale.getDefault());
+		 System.out.println(bundle.keySet());
+
+	    }
+	
+	@FXML
+    void onEnglishButtonClicked(ActionEvent event) {
+        // cambia el idioma a inglés
+        language = "en";
+        bundle = ResourceBundle.getBundle("traducciones.ingles", Locale.getDefault());
+        System.out.println(bundle.keySet());
+
+        updateText();
+    }
 
 	
 	
 	  
-	public void initialize() {
-        // Inicializar el objeto bundle con el archivo de propiedades correspondiente
-        bundle = ResourceBundle.getBundle("com.example.MyBundle");
-    }
+	
 
-    @FXML
-    public void cambiarIdioma(ActionEvent event) {
-        // Utilizar el objeto bundle para obtener los textos correspondientes al idioma seleccionado
-        String textoLabel = bundle.getString("label.text");
-        String textoVolver = bundle.getString("buttonVolver.text");
-        String textoOscuro = bundle.getString("buttonOscuro.text");
-        String textoTraducir = bundle.getString("buttonTraducir.text");
-        label.setText(textoLabel);
-        atras.setText(textoVolver);
-        oscuro.setText(textoOscuro);
-        ingles.setText(textoTraducir);
+	private void updateText() {
+        // actualiza el texto de los botones y la etiqueta en función del idioma actual
+        label.setText(bundle.getString("Administrator mode"));
+        atras.setText(bundle.getString("back"));
+        ingles.setText(bundle.getString("Translate to Spanish"));
+        oscuro.setText(bundle.getString("Dark mode"));
     }
 	
 	
